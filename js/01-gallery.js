@@ -36,7 +36,7 @@ galleryEL.addEventListener('click', e => {
 function renderGallery(gallery) {
   return gallery
     .map(({ preview, original, description }) => {
-      return `<li class="gallery__item">
+      return `<div class="gallery__item">
   <a class="gallery__link" href="${original}">
     <img
       class="gallery__image"
@@ -45,7 +45,7 @@ function renderGallery(gallery) {
       alt="${description}"
     />
   </a>
-</li>`;
+</div>`;
     })
     .join('');
 }
